@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapport de Surveillance de Site Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .graph {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rapport de Surveillance du Site Web</h1>
+    <h2>URL surveillée: {{ result.url }}</h2>
+    <h3>Date et heure de la requête: {{ result.datetime }}</h3>
+    <h3>Titre de la page: {{ result.title }}</h3>
+
+    <h2>Informations détaillées:</h2>
+    <table>
+        <tr>
+            <th>Information</th>
+            <th>Valeur</th>
+        </tr>
+        <tr>
+            <td>MD5 du contenu de la page</td>
+            <td>{{ result.content_md5 }}</td>
+        </tr>
+        <tr>
+            <td>MD5 des entêtes</td>
+            <td>{{ result.headers_md5 }}</td>
+        </tr>
+        <tr>
+            <td>MD5 du début de la page (de &lt;html&gt; à &lt;/head&gt;)</td>
+            <td>{{ result.header_section_md5 }}</td>
+        </tr>
+        <tr>
+            <td>Applicatif du site (X-Generator)</td>
+            <td>{{ result.x_generator }}</td>
+        </tr>
+        <tr>
+            <td>Technologie du serveur (Server)</td>
+            <td>{{ result.server }}</td>
+        </tr>
+        <tr>
+            <td>Date d'expiration du certificat SSL</td>
+            <td>{{ result.ssl_expiry }}</td>
+        </tr>
+        <tr>
+            <td>Langage du serveur (X-Powered-By)</td>
+            <td>{{ result.x_powered_by }}</td>
+        </tr>
+    </table>
+
+<!--     <h2>Graphiques:</h2>
+    <img src="{{ result.response_time_graph }}" alt="Graphique des temps de réponse" class="graph">
+    <img src="{{ result.response_size_graph }}" alt="Graphique des tailles de réponse" class="graph"> -->
+
+    <h2>Cookies renvoyés:</h2>
+    <table border = 1>
+    {% for key, value in result.cookies.items() %}
+    <tr>
+       <th> {{ key }} </th>
+       <td> {{ value }} </td>
+    </tr>
+    {% endfor %}
+    </table>
+
+    <h2>Temps de réponse (micro secondes):</h2>
+    <p>{{ result.elapsed_u }}</p>
+
+    <h2>Entêtes de réponse:</h2>
+    <table border = 1>
+    {% for key, value in result.headers.items() %}
+    <tr>
+       <th> {{ key }} </th>
+       <td> {{ value }} </td>
+    </tr>
+    {% endfor %}
+    </table>
+
+    <h2>Mots clés indiquant un piratage (s'ils existent):</h2>
+    <p>{{ result.hacked_keywords }}</p>
+
+    <h2>Graphique de temps de réponse par rapport à la taille de la page:</h2>
+    <img src="data:image/png;base64,{{ result.timing_grah_b64 }}" alt="Graphique de temps de réponse/taille" style="max-width: 100%;">
+
+    <h2>Capture d'écran:</h2>
+    <img src="data:image/png;base64,{{ result.screenshot_b64 }}" alt="Capture d'écran du site" style="max-width: 100%;">
+
+<hr/>
+
+
+ 
+</body>
+</html>
