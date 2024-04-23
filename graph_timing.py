@@ -22,9 +22,5 @@ def get_graph(int_timing,int_size):
   # Affichage du graphique
   # plt.savefig('/tmp/matplotlib.png')
   plt.savefig('matplotlib.png', bbox_inches='tight', dpi=300)
-
   png = open('matplotlib.png','rb').read()
   return( b64encode(png).decode() )
-
-
-get_graph(8000000000000,6000000000000)
