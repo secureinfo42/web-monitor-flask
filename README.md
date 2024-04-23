@@ -26,7 +26,7 @@ Then go to `http://127.0.0.1:5000`
 curl 'https://127.0.0.1:5000/report' --compressed -X POST --data 'url=https://app.site.com/' -o report.html
 ```
 
-## Quick and dirty deploy on Apache
+## Quick deploy on Apache
 
 To quickly deploy it on a server, in your Apache config, set a reverse proxy : 
 
