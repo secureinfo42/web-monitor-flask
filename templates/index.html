@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Web-Query</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 95%;
+            box-sizing: border-box; /* Include padding and border in the element's width and height */
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <br />
+    <h1>Web-Query</h1>
+    <br />
+    <form action="/report" method="post">
+        <label for="url">Entrez l'URL du site à surveiller:</label>
+        <input type="url" id="url" name="url" required>
+        <button type="submit">Surveiller</button>
+    </form>
+</body>
+</html>
