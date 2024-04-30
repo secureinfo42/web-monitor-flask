@@ -15,7 +15,7 @@ apt-get install libwoff1 libevent-2.1-7 libgstreamer-plugins-base1.0-0 gstreamer
 playwright install
 ```
 
-## Local execution
+## Local server execution
 
 Start the server by running `python server.py`
 Then go to `http://127.0.0.1:5000`
@@ -23,7 +23,14 @@ Then go to `http://127.0.0.1:5000`
 ## Automation of request
 
 ```sh
+# Through Flask
 curl 'https://127.0.0.1:5000/report' --compressed -X POST --data 'url=https://app.site.com/' -o report.html
+
+# report.py for a HTML report ordered by date
+python3 report.py 'https://app.site.com/'
+
+# cli.py for text report
+python3 cli.py 'https://app.site.com/'
 ```
 
 ## Quick deploy on Apache
