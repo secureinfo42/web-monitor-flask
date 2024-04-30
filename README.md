@@ -9,7 +9,7 @@
 sudo apt-get -y install \
    python3-venv python3-pip libwoff1 libevent-2.1-7 libgstreamer-plugins-base1.0-0 gstreamer1.0-plugins-base \
    libharfbuzz-icu0 libenchant-2-2 libsecret-1-0 libhyphen0 libmanette-0.2-0 \
-   libgles2 libgstreamer-gl1.0-0 libgstreamer-plugins-bad1.0-0
+   libgles2 libgstreamer-gl1.0-0 libgstreamer-plugins-bad1.0-0 libflite1 libx264-*
 ```
 
 ### Set virtuel env for python
