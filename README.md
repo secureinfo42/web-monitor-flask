@@ -1,4 +1,5 @@
-# Web-Monitor-Flask
+# Web-Query
+<i>web-monitor-flask</i>
 
 __Made assisted with chatGPT 4__
 
