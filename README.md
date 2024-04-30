@@ -3,13 +3,26 @@
 
 ## Dependencies
 
-```sh
-pip install -r requirements.txt
+### Debian-like dependancies
 
-apt-get install libwoff1 libevent-2.1-7 libgstreamer-plugins-base1.0-0 gstreamer1.0-plugins-base \
+```sh
+sudo apt-get -y install \
+   python3-venv python3-pip libwoff1 libevent-2.1-7 libgstreamer-plugins-base1.0-0 gstreamer1.0-plugins-base \
    libharfbuzz-icu0 libenchant-2-2 libsecret-1-0 libhyphen0 libmanette-0.2-0 \
    libgles2 libgstreamer-gl1.0-0 libgstreamer-plugins-bad1.0-0
+```
 
+### Set virtuel env for python
+
+```sh
+cd web-monitor-flask/
+python3 -m venv .
+pip install -r requirements.txt
+```
+
+### Install playwright (for web sites screenshot)
+
+```sh
 # Download of headless web browsers
 playwright install
 ```
