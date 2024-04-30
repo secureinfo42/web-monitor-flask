@@ -84,6 +84,3 @@ In your `/etc/apache2/sites-enabled/099-app.site.com-le-ssl.conf` :
 </IfModule>
 ```
 
-<i>Assisted with chatGPT 4</i>
-
-
