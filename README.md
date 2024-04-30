@@ -1,8 +1,6 @@
 # Web-Query
 <i>web-monitor-flask</i>
 
-__Made assisted with chatGPT 4__
-
 ## Dependencies
 
 ```sh
@@ -72,5 +70,7 @@ In your `/etc/apache2/sites-enabled/099-app.site.com-le-ssl.conf` :
   </VirtualHost>
 </IfModule>
 ```
+
+<i>Assisted with chatGPT 4</i>
 
 
