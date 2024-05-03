@@ -3,13 +3,43 @@
 
 ## Dependencies
 
-### Debian-like dependancies
+### Debian install
 
 ```sh
-sudo apt-get -y install \
-   python3-venv python3-pip libwoff1 libevent-2.1-7 libgstreamer-plugins-base1.0-0 gstreamer1.0-plugins-base \
-   libharfbuzz-icu0 libenchant-2-2 libsecret-1-0 libhyphen0 libmanette-0.2-0 \
-   libgles2 libgstreamer-gl1.0-0 libgstreamer-plugins-bad1.0-0 libflite1 libx264-*
+apt-get -y install \
+	python3-venv \
+	python3-pip \
+	libwoff1 \
+	libevent-2.1-7 \
+	libgstreamer-plugins-base1.0-0 \
+	gstreamer1.0-plugins-base \
+	libharfbuzz-icu0 \
+	libenchant-2-2 \
+	libsecret-1-0 \
+	libhyphen0 \
+	libmanette-0.2-0 \
+	libgles2 \
+	libgstreamer-gl1.0-0 \
+	libgstreamer-plugins-bad1.0-0 \
+	libflite1 \
+	libx264-* \
+	libcups2 \
+	libnspr4 \
+	libatk1.0-0 \
+	libatk-bridge2.0-0 \
+	libpango-1.0-0 \
+	libxrandr2 \
+	libxdamage1 \
+	libxcomposite1 \
+	libatk-bridge2.0-0 \
+	libatspi2.0-0 \
+	libnss3 \
+	libxcursor1 \
+	libgtk-3-0 \
+	librust-gdk-sys-dev \
+	libvpx7
+	git \
+	curl
 ```
 
 ### Set virtuel env for python
